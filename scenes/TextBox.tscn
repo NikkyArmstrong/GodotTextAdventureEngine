@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/TextEdit.gd" type="Script" id=1]
+[ext_resource path="res://assets/dos.tres" type="DynamicFont" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+margin_right = 1004.0
+margin_bottom = 565.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/caret_color = Color( 0.694118, 0.701961, 0.694118, 1 )
+custom_colors/font_color_selected = Color( 0.694118, 0.701961, 0.694118, 1 )
+custom_colors/font_color = Color( 0.694118, 0.701961, 0.694118, 1 )
+custom_colors/background_color = Color( 0.0117647, 0.0117647, 0.0117647, 1 )
+syntax_highlighting = true
+context_menu_enabled = false
+shortcut_keys_enabled = false
+virtual_keyboard_enabled = false
+selecting_enabled = false
+caret_block_mode = true
+caret_blink = true
+caret_blink_speed = 0.53
+caret_moving_by_right_click = false
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
