@@ -8,6 +8,70 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Room",
+"class": "Bedroom",
+"language": "GDScript",
+"path": "res://Bedroom.gd"
+}, {
+"base": "Room",
+"class": "Cave",
+"language": "GDScript",
+"path": "res://Cave.gd"
+}, {
+"base": "Room",
+"class": "DragonDen",
+"language": "GDScript",
+"path": "res://DragonDen.gd"
+}, {
+"base": "Room",
+"class": "GravelPath",
+"language": "GDScript",
+"path": "res://GravelPath.gd"
+}, {
+"base": "Node",
+"class": "Inventory",
+"language": "GDScript",
+"path": "res://Inventory.gd"
+}, {
+"base": "Node",
+"class": "Item",
+"language": "GDScript",
+"path": "res://Item.gd"
+}, {
+"base": "Room",
+"class": "Outside",
+"language": "GDScript",
+"path": "res://Outside.gd"
+}, {
+"base": "Room",
+"class": "River",
+"language": "GDScript",
+"path": "res://River.gd"
+}, {
+"base": "Node",
+"class": "Room",
+"language": "GDScript",
+"path": "res://Room.gd"
+}, {
+"base": "Node",
+"class": "RoomDriver",
+"language": "GDScript",
+"path": "res://RoomDriver.gd"
+} ]
+_global_script_class_icons={
+"Bedroom": "",
+"Cave": "",
+"DragonDen": "",
+"GravelPath": "",
+"Inventory": "",
+"Item": "",
+"Outside": "",
+"River": "",
+"Room": "",
+"RoomDriver": ""
+}
+
 [application]
 
 config/name="SecretSantaAdventureQuest"

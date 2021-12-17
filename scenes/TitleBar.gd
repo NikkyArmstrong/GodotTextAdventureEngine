@@ -10,6 +10,12 @@ var currentRoom = "West of House";
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	updateTitle()
+	
+func _process(_delta):
+	updateTitle()
+	
+func updateTitle():
 	var scoreText = "Score: %d" % score
 	get_node("Score").set_text(scoreText)
 	

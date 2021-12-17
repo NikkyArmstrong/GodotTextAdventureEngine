@@ -7,29 +7,32 @@ var promptLine = 0;
 var updatePrompt = false;
 var currentLine = 0;
 
+var gameRunning = false;
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	cursor_set_line(currentLine)
-	insertPrompt()
 	grab_focus()
 
+# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if updatePrompt:
 		cursor_set_line(promptLine)
 		cursor_set_column(1)
 		updatePrompt = false
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _input(event):
-	if event.is_action_pressed("ui_accept"):
-		var userInput = get_line(cursor_get_line());
-		var toParse = userInput.split(prompt)[1]
-		newLine()
-		insert_text_at_cursor(toParse)
-		newLine()
-		newLine()
-		insertPrompt()
+func setGameRunning(running):
+	gameRunning = running
 
+func outputText(textToOutput):
+	insert_text_at_cursor(textToOutput)
+	newLine()
+	newLine()
+
+func getCurrentLine():
+	var input = get_line(cursor_get_line());
+	return input.split(prompt)[1]
+
+func _input(event):
 # Consume all navigation attempts
 	if event.is_action_pressed("ui_up") or \
 	   event.is_action_pressed("ui_down") or \
