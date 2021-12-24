@@ -52,7 +52,7 @@ func _init():
 	
 	cave.north = dragonDen
 	cave.east = dragonDen
-	cave.south = dragonDen
+	cave.west = dragonDen
 	
 	dragonDen.south = cave
 	
