@@ -1,15 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/TextBox.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/TitleBar.tscn" type="PackedScene" id=2]
-[ext_resource path="res://GameDriver.gd" type="Script" id=3]
+[ext_resource path="res://scripts/GameDriver.gd" type="Script" id=3]
+[ext_resource path="res://scripts/TextStore.gd" type="Script" id=4]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 3 )
 
 [node name="Background" type="ColorRect" parent="."]
-margin_right = 1024.0
-margin_bottom = 600.0
+margin_right = 1920.0
+margin_bottom = 1080.0
 color = Color( 0.694118, 0.701961, 0.694118, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -19,3 +20,28 @@ __meta__ = {
 position = Vector2( 10, 30 )
 
 [node name="TitleBar" parent="." instance=ExtResource( 2 )]
+
+[node name="TextVariables" type="Node" parent="."]
+script = ExtResource( 4 )
+introText = "███╗   ███╗███████╗██████╗ ██████╗ ██╗   ██╗
+████╗ ████║██╔════╝██╔══██╗██╔══██╗╚██╗ ██╔╝
+██╔████╔██║█████╗  ██████╔╝██████╔╝ ╚████╔╝ 
+██║╚██╔╝██║██╔══╝  ██╔══██╗██╔══██╗  ╚██╔╝  
+██║ ╚═╝ ██║███████╗██║  ██║██║  ██║   ██║   
+╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝ 
+
+ ██████╗██╗  ██╗██████╗ ██╗███████╗████████╗███╗   ███╗ █████╗ ███████╗██╗
+██╔════╝██║  ██║██╔══██╗██║██╔════╝╚══██╔══╝████╗ ████║██╔══██╗██╔════╝██║
+██║     ███████║██████╔╝██║███████╗   ██║   ██╔████╔██║███████║███████╗██║
+██║     ██╔══██║██╔══██╗██║╚════██║   ██║   ██║╚██╔╝██║██╔══██║╚════██║╚═╝
+╚██████╗██║  ██║██║  ██║██║███████║   ██║   ██║ ╚═╝ ██║██║  ██║███████║██╗
+ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚══════╝   ╚═╝   ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚═╝"
+welcomeText = "Welcome to the Colossal Christmas Cave Adventure Quest!
+You will embark on an epic** quest to retrieve your present from the depths of a dark and mysterious cave. It's said the present is guarded by a huge fire-breathing dragon.
+Good luck!
+
+** Note: quest may not be epic, its quite short. Quest may also be full of bugs."
+copyProtectionText = "Please enter the first and fifth words in Nikky's message!"
+copyProtectionAnswer = "hey your"
+helpResponse = "Hello! I hope you're having fun! If you are stuck, we're sorry. Please ask Nikky for help, if she's awake.
+If you have found a bug, congratulations! Try to find them all!"
